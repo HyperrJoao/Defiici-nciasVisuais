@@ -20,20 +20,112 @@ button {
     border: none;
     cursor: pointer;
     border-radius: 5px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, box-shadow 0.3s ease-in-out;
 }
 
+/* Estilo para o hover dos botões de deficiências */
 button:hover {
     background-color: #888;
+    animation: glow-effect 1.5s ease-in-out infinite;
+}
+
+/* Efeito de brilho (glow) e piscar */
+@keyframes glow-effect {
+    0% {
+        box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff3333;
+    }
+    50% {
+        box-shadow: 0 0 10px #fff, 0 0 20px #ff3333, 0 0 30px #ff3333;
+    }
+    100% {
+        box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff3333;
+    }
+}
+
+button:hover .protanopia {
+    background-color: #ff3333;
+    animation: glow-effect-protanopia 1.5s ease-in-out infinite;
+}
+
+@keyframes glow-effect-protanopia {
+    0% {
+        box-shadow: 0 0 5px #fff, 0 0 10px #ff3333, 0 0 15px #ff3333;
+    }
+    50% {
+        box-shadow: 0 0 10px #fff, 0 0 20px #ff3333, 0 0 30px #ff3333;
+    }
+    100% {
+        box-shadow: 0 0 5px #fff, 0 0 10px #ff3333, 0 0 15px #ff3333;
+    }
+}
+
+button:hover .deuteranopia {
+    background-color: #4dff33;
+    animation: glow-effect-deuteranopia 1.5s ease-in-out infinite;
+}
+
+@keyframes glow-effect-deuteranopia {
+    0% {
+        box-shadow: 0 0 5px #fff, 0 0 10px #4dff33, 0 0 15px #4dff33;
+    }
+    50% {
+        box-shadow: 0 0 10px #fff, 0 0 20px #4dff33, 0 0 30px #4dff33;
+    }
+    100% {
+        box-shadow: 0 0 5px #fff, 0 0 10px #4dff33, 0 0 15px #4dff33;
+    }
+}
+
+button:hover .tritanopia {
+    background-color: #33c9ff;
+    animation: glow-effect-tritanopia 1.5s ease-in-out infinite;
+}
+
+@keyframes glow-effect-tritanopia {
+    0% {
+        box-shadow: 0 0 5px #fff, 0 0 10px #33c9ff, 0 0 15px #33c9ff;
+    }
+    50% {
+        box-shadow: 0 0 10px #fff, 0 0 20px #33c9ff, 0 0 30px #33c9ff;
+    }
+    100% {
+        box-shadow: 0 0 5px #fff, 0 0 10px #33c9ff, 0 0 15px #33c9ff;
+    }
+}
+
+button:hover .acromatopsia {
+    background-color: #ffffff;
+    animation: glow-effect-acromatopsia 1.5s ease-in-out infinite;
+}
+
+@keyframes glow-effect-acromatopsia {
+    0% {
+        box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff;
+    }
+    50% {
+        box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff;
+    }
+    100% {
+        box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff;
+    }
 }
 
 #conteudo {
     padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
+/* Estilo para lista */
 ul {
     list-style-type: none;
     padding: 0;
+    margin: 0;
+}
+
+ul li {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
 }
 
 /* Estilo para palavras destacadas */
@@ -55,10 +147,65 @@ ul {
     color: #33c9ff; /* Azul para Tritanopia */
 }
 
+.acromatopsia .destaque {
+    color: #fff; /* Branco para Acromatopsia */
+}
+
 /* Estilo do rodapé */
 footer {
     text-align: center;
     padding: 10px;
     background-color: #333;
     color: white;
+    margin-top: 40px;
+}
+
+/* Container de imagens */
+.imagem-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.imagem-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Estilo para o Accordion */
+.accordion {
+    margin-top: 20px;
+}
+
+.accordion-btn {
+    background-color: #444;
+    color: white;
+    padding: 15px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.accordion-btn:hover {
+    background-color: #888;
+}
+
+.accordion-content {
+    padding: 10px;
+    background-color: #555;
+    color: white;
+    display: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.accordion-btn.active + .accordion-content {
+    display: block;
 }

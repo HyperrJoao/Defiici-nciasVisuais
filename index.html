@@ -4,32 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Deficiências Visuais</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="vision-normal"> <!-- Começa com a visão normal, pode ser alterado via JS -->
+
     <header>
         <h1>Deficiências Visuais</h1>
-        <button onclick="alterarCores('normal')">Visão Normal</button>
-        <button onclick="alterarCores('protanopia')">Protanopia</button>
-        <button onclick="alterarCores('deuteranopia')">Deuteranopia</button>
-        <button onclick="alterarCores('tritanopia')">Tritanopia</button>
     </header>
 
-    <section id="conteudo">
-        <h2>O que são deficiências visuais?</h2>
-        <p>As <span class="destaque">deficiências visuais</span> envolvem problemas na percepção de cores, formas e profundidade. Existem diversos tipos de deficiências, sendo as mais comuns a <span class="destaque">daltonismo</span>, que afeta a percepção de cores, e a <span class="destaque">cegueira</span>, que envolve a perda total ou parcial da visão.</p>
-        
-        <h3>Principais Tipos de Deficiência Visual</h3>
-        <ul>
-            <li><span class="destaque">Protanopia</span>: Deficiência na percepção de cores vermelhas.</li>
-            <li><span class="destaque">Deuteranopia</span>: Deficiência na percepção de cores verdes.</li>
-            <li><span class="destaque">Tritanopia</span>: Deficiência na percepção de cores azuis.</li>
-            <li><span class="destaque">Acromatopsia</span>: Visão em preto e branco, sem percepção de cores.</li>
-        </ul>
+    <main>
+        <section id="conteudo">
+            <h2>O que são deficiências visuais?</h2>
+            <p>As <span class="destaque">deficiências visuais</span> envolvem problemas na percepção de cores, formas e profundidade. Existem diversos tipos de deficiências, sendo as mais comuns a <span class="destaque">daltonismo</span>, que afeta a percepção de cores, e a <span class="destaque">cegueira</span>, que envolve a perda total ou parcial da visão.</p>
+            
+            <!-- Espaço para imagem explicativa -->
+            <div class="imagem-container">
+                <img src="img/rainboweye.jpeg" alt="Exemplo de deficiências visuais" />
+            </div>
 
-        <h3>Como Melhorar a Acessibilidade</h3>
-        <p>É importante que websites, aplicativos e outros sistemas digitais sejam acessíveis para todos, incluindo pessoas com deficiências visuais. Usar cores contrastantes, como o <span class="destaque">preto e branco</span>, pode ser útil para muitas pessoas. Além disso, permitir que as cores possam ser ajustadas é uma boa prática.</p>
-    </section>
+            <h3>Principais Tipos de Deficiência Visual</h3>
+
+            <!-- Accordion - Botões de Tópicos Expansíveis -->
+            <div class="accordion">
+                <button class="accordion-btn">Protanopia</button>
+                <div class="accordion-content">
+                    <p>Protanopia é um tipo de daltonismo em que a pessoa não consegue perceber as cores vermelhas. Isso pode causar dificuldades para distinguir entre tons de vermelho e verde.</p>
+                </div>
+
+                <button class="accordion-btn">Deuteranopia</button>
+                <div class="accordion-content">
+                    <p>Deuteranopia é uma deficiência visual onde a pessoa tem dificuldade em perceber as cores verdes. Isso afeta a distinção entre tons de verde e vermelho.</p>
+                </div>
+
+                <button class="accordion-btn">Tritanopia</button>
+                <div class="accordion-content">
+                    <p>Tritanopia é a falta de percepção de cores azuis. Pessoas com essa deficiência visual têm dificuldade em distinguir entre azul e amarelo.</p>
+                </div>
+
+                <button class="accordion-btn">Acromatopsia</button>
+                <div class="accordion-content">
+                    <p>Acromatopsia é uma condição rara onde a pessoa não percebe nenhuma cor, vendo tudo em preto e branco, como uma visão monocromática.</p>
+                </div>
+            </div>
+
+            <!-- Espaço para imagem explicativa -->
+            <div class="imagem-container">
+                <img src="img/tipo-de-deficiencias.jpg" alt="Exemplo de tipos de deficiências visuais" />
+            </div>
+
+            <h3>Como Melhorar a Acessibilidade</h3>
+            <p>É importante que websites, aplicativos e outros sistemas digitais sejam acessíveis para todos, incluindo pessoas com deficiências visuais. Usar cores contrastantes, como o <span class="destaque">preto e branco</span>, pode ser útil para muitas pessoas. Além disso, permitir que as cores possam ser ajustadas é uma boa prática.</p>
+        </section>
+    </main>
 
     <footer>
         <p>Desenvolvido para promover a acessibilidade digital.</p>
